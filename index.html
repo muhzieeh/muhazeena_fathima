@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal portfolio- Muhazeena Fathima</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://kit.fontawesome.com/fca480ffd3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   
+    
+    
+<div id="header">
+    <div class="container">
+        
+
+        <nav>
+            <img src="images/logoo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header" style="--i:1">Home</a></li>
+                <li><a href="#about" style="--i:2">About</a></li>
+                <li><a href="#services" style="--i:3">Services</a></li>
+                <li><a href="#portfolio" style="--i:4">Portfolio</a></li>
+                <li><a href="#contacts" style="--i:5">Contact</a></li>
+                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            
+        </nav>
+        <section class="home">
+            <div class="header-text">
+                <h1> Hello it's me<br> <span>Muhazeena Fathima</span> </h1>
+                <h4> And I'm a <span class="text"></span></h4>
+                <div class="home-sci">
+                    <a href="https://www.instagram.com/muhzieeh" style="--i:7"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://github.com/muhzieeh" style="--i:8"><i class='bx bxl-github'></i></a>
+                    <a href="mailto:muhazeena1415@gmail.com" style="--i:9"><i class='bx bx-envelope'></i></a>
+                    <a href="https://www.linkedin.com/in/muhazeena-fathima-a62844305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" style="--i:10"><i class='bx bxl-linkedin'></i></a>
+                </div>
+                <div class="images">
+                    <img src="images/shape.png" class="shape">
+                    <img src="images/img1.png" class="girl">
+                </div>
+            </div>
+        </section>
+    </div>
+</div>    
+<script src="main.js"></script>
+
+<!---------------about---------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1"><img src="images/image2.1.jpg" ></div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About <span>Me</span></h1>
+                <p class="cont">Hello! I'm Muhazeena Fathima, a passionate and dedicated developer with a
+                     strong background in Python and frontend development. I hold a Master of Computer
+                     Applications (MCA) degree, which has equipped me with extensive knowledge and 
+                     skills in various aspects of software development. As a Python developer, I enjoy
+                     solving complex problems and creating efficient, scalable solutions. In addition,
+                     my frontend development expertise allows me to build visually appealing and
+                     user-friendly web applications. I'm constantly learning and staying updated with 
+                     the latest technologies to ensure that I deliver the best results in all my projects.</p>
+                     
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Skills')"><span>Skills</span></p>
+                    <p class="tab-links" onclick="opentab('education')"><span>Education</span></p>
+                </div>
+                <div class="container1" id="education">
+                    <ul>
+                        
+                            <li><span>B.Sc Computer Science</span><br><br>2019-2022<br>University of Calicut</li><br>
+                            <li><span>MCA</span><br><br>2022-2024<br>APJ Abdul Kalam Technological University</li><br>
+                            <li><span>Python and Django</span><br><br>2021<br>Avodha Edutech Private Limited</li><br>
+                            <li><span>Cloud Computing</span><br><br>2023<br>NPTEL</li><br>
+                            <li><span>Ethical Hacking</span><br><br>2023<br>NPTEL</li><br>
+                    </ul>
+                </div>
+
+                <section>
+                    <div class="container1 active-tab" id="Skills">
+                        <h1 class="heading1">Technical <span>Skills</span></h1>
+                        <div class="Technical-bars">
+                            <div class="bar">
+                                <div class="info">
+                                    <i style="color: rgb(95, 62, 215);" class='bx bxl-python'></i>
+                                    <span>PYTHON</span>
+                                </div>
+                                <div class="progress-line python">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="bar">
+                                <div class="info">
+                                    <i style="color: rgba(250, 117, 9, 0.728);" class='bx bxl-html5'></i>
+                                    <span>HTML</span>
+                                </div>
+                                <div class="progress-line html">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="bar">
+                                <div class="info">
+                                    <i style="color: rgb(80, 20, 99);" class='bx bxl-css3'></i>
+                                    <span>CSS</span>
+                                </div>
+                                <div class="progress-line css">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="bar">
+                                <div class="info">
+                                    <i style="color: rgb(205, 202, 29);" class='bx bxl-javascript'></i>
+                                    <span>JAVASCRIPT</span>
+                                </div>
+                                <div class="progress-line javascript">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="bar">
+                                <div class="info">
+                                    <i style="color: rgb(36, 100, 40);" class='bx bxl-django'></i>
+                                    <span>DJANGO</span>
+                                </div>
+                                <div class="progress-line django">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------------------services------------------------->
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My <span>Services</span></h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2><span>Web</span> Design</h2><br>
+                <p> Web design services cover a broad spectrum of tasks and 
+                considerations aimed at creating visually appealing, user-friendly, 
+                and effective websites.</p>
+                 <a href="web.html">Learn more</a> 
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                    <h2><span>UI/UX </span>Design</h2><br>
+                    <p>User Interface (UI) and User Experience (UX) Design are pivotal aspects of web design, focusing on creating visually appealing interfaces and intuitive user experiences. </p>
+                     <a href="ux.html">Learn more</a> 
+            </div>
+           
+                    
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2><span>Python Full-Stack</span> Web Development</h2><br>
+                <p> Python full stack developer is a versatile software engineer proficient in both front-end and back-end development using the Python programming language.</p>
+                <a href="fullstack.html">Learn more</a></div> 
+            </div>
+        </div>
+    </div>
+</div>
+<!----------------------portfolio------------------------->
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My <span>Work</span></h1>
+        <div class="work-list">
+        <div class="work">
+            <img src="images/work1.jpeg">
+            <div class="layer">
+                <h3>E-Ration Shop</h3><br>
+                <p>The e-ration shop project for my BSc Computer Science degree aims to develop a web and mobile application that digitizes the public distribution system (PDS), enhancing efficiency, transparency, and accessibility.</p>
+                <a href="eration.html"><i class="fa-solid fa-link"></i></a>
+            </div>
+        </div>
+        <div class="work">
+            <img src="images/work2.jpeg">
+            <div class="layer">
+                <h3>Text-To-Speech</h3><br><p>The Text-to-Speech (TTS) mini project for my MCA program focuses on developing a system that converts written text into natural-sounding .</p>
+                <a href="tts.html"><i class="fa-solid fa-link"></i></a>
+            </div>
+            
+        </div>
+        <div class="work">
+            <img src="images/work 3.jpeg">
+            <div class="layer">
+                <h3>CGCAPS</h3><br><p>The Career Guidance and College Admission Chance Prediction System project for an MCA program aims to develop an AI-driven platform that assists students .</p>
+                <a href="cr.html"><i class="fa-solid fa-link"></i></a>
+            </div>
+        </div>
+        </div>
+        <!-- <a href="#" class="btn">See More</a> -->
+    </div>
+</div>
+<!---------------------------contacts--------------------------->
+
+<div id="contacts">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact <span>Me</span></h1>
+                <p><i class="fa-regular fa-paper-plane"></i>muhazeena1415@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+971 564574727</p>
+                <div class="home-sci">
+                    <a href="https://www.instagram.com/muhzieeh" style="--i:7"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://github.com/muhzieeh" style="--i:8"><i class='bx bxl-github'></i></a>
+                    <a href="mailto:muhazeena1415@gmail.com" style="--i:9"><i class='bx bx-envelope'></i></a>
+                    <a href="https://www.linkedin.com/in/muhazeena-fathima-a62844305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" style="--i:10"><i class='bx bxl-linkedin'></i></a>
+                </div>
+                <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name">
+                    <input type="text" name="email" placeholder="Your Email">
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+
+                </form>
+                
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Muhazeena Fathima.<i class="fa-solid fa-heart"></i></p>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("container1");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+<script>
+    var sidmenu =document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidmenu.style.right="0";
+    }
+    function closemenu(){
+        sidmenu.style.right="-200px";
+    }
+</script>
+</body>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwXP7X78Q48UzH3IKQFwEt2P5HGL8MLd_hKEww3ne2uOUG5EVW6lTmMHEOIA6mii0acKA/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</html>

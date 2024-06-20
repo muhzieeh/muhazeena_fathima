@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-to-Speech Project</title>
+    <link rel="stylesheet" href="style2.css"> <!-- Ensure this links to your main CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f8f8;
+            color: #cd7b7b;
+            margin: 0;
+            padding: 0;
+        }
+        .frame {
+            border: 5px solid #c5c5c5;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        .container {
+            padding-top: 20px;
+        }
+        .description {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #cd7b7b;
+            letter-spacing: 1px;
+        }
+        .features {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 2px solid #c5c5c5;
+            border-radius: 10px;
+        }
+        .features h3 {
+            font-size: 18px;
+            color: #cd7b7b;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .features ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .features li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            color: #cd7b7b;
+        }
+        .features li::before {
+            content: attr(data-emoji); /* Emoji for bullet */
+            margin-right: 10px;
+            font-size: 20px;
+            color: #cd7b7b; /* Emoji color */
+        }
+        .carousel {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .carousel img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .carousel .dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .carousel .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #bbb;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .carousel .dot.active {
+            background-color: #717171;
+        }
+        .carousel .arrow {
+            position: absolute;
+            top: 50%;
+            width: 30px;
+            height: 30px;
+            margin-top: -15px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            color: #fdaaaa;
+            font-size: 20px;
+        }
+        .carousel .arrow:hover {
+            background-color: rgba(255, 255, 255, 1);
+        }
+        .carousel .prev {
+            left: 10px;
+        }
+        .carousel .next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="frame">
+        <div class="container">
+            <div class="description">
+                <h2>Text-to-Speech </h2>
+                <p>Text-to-speech (TTS) technology stands at the forefront of a transformative era in humancomputer
+                    interaction, revolutionizing the way we engage with written content. This
+                    innovative application harnesses the power of sophisticated algorithms to seamlessly convert
+                    written text into natural-sounding spoken words, breaking down barriers for accessibility and
+                    communication.</p>
+            </div>
+            <div class="features">
+                <h3>Features:</h3>
+                <ul>
+                    <li data-emoji="💬">user enter the Text</li>
+                    <li data-emoji="🔉">Speak The Audio</li>
+                    <li data-emoji="📄">User Choose The Accent</li>
+                    <li data-emoji="🚄">User Choose The Speed</li>
+                    <li data-emoji="🎧">User Can Save The Audio</li>
+                    
+                </ul>
+            </div>
+            <div class="carousel">
+                <!-- Add your TTS application images here -->
+                <img src="images/tts1 (1).png" alt="TTS Application Image 1" class="slide">
+                <img src="images/tts2.png" alt="TTS Application Image 2" class="slide" style="display:none;">
+                <img src="images/tts3.png" alt="TTS Application Image 3" class="slide" style="display:none;">
+                <!-- Add more images if needed -->
+                <div class="prev arrow" onclick="changeSlide(-1)">&#10094;</div>
+                <div class="next arrow" onclick="changeSlide(1)">&#10095;</div>
+                <div class="dots">
+                    <!-- Add dots for each image -->
+                    <span class="dot active" onclick="currentSlide(0)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <!-- Add more dots if needed -->
+                </div>
+            </div>
+        </div>
+        <footer>
+            <a href="index.html" class="back-link">Back to Portfolio</a>
+        </footer>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.carousel .slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+            });
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+            currentIndex = index;
+        }
+
+        function currentSlide(index) {
+            showSlide(index);
+        }
+
+        function changeSlide(direction) {
+            let newIndex = currentIndex + direction;
+            if (newIndex < 0) newIndex = slides.length - 1;
+            if (newIndex >= slides.length) newIndex = 0;
+            showSlide(newIndex);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlide(currentIndex);
+        });
+    </script>
+</
